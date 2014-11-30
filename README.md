@@ -35,7 +35,8 @@ unembed.parse('<iframe width="420" height="315" src="//www.youtube.com/embed/zOg
     'https://img.youtube.com/vi/zOgUB1Iqd_01.jpg',
     'https://img.youtube.com/vi/zOgUB1Iqd_02.jpg',
     'https://img.youtube.com/vi/zOgUB1Iqd_03.jpg'
-  ]
+  ],
+  direct_url: "https://www.youtube.com/watch?v=zOgUB1Iqd_0"
 }
 
 // Vimeo
