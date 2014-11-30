@@ -35,7 +35,9 @@ describe('YouTube parsing tests', function() {
   thumbnails:
    [ 'https://img.youtube.com/vi/zOgUB1Iqd_01.jpg',
      'https://img.youtube.com/vi/zOgUB1Iqd_02.jpg',
-     'https://img.youtube.com/vi/zOgUB1Iqd_03.jpg' ]});
+     'https://img.youtube.com/vi/zOgUB1Iqd_03.jpg' ],
+  direct_url: "https://www.youtube.com/watch?v=zOgUB1Iqd_0"
+   });
   });
 
   it('should parse youtube iframe codes with options', function() {
@@ -56,7 +58,9 @@ describe('YouTube parsing tests', function() {
   thumbnails:
    [ 'https://img.youtube.com/vi/S75CeSgoGa01.jpg',
      'https://img.youtube.com/vi/S75CeSgoGa02.jpg',
-     'https://img.youtube.com/vi/S75CeSgoGa03.jpg' ]});
+     'https://img.youtube.com/vi/S75CeSgoGa03.jpg' ],
+  direct_url: "https://www.youtube.com/watch?v=S75CeSgoGa0"
+  });
   });
 
 });
