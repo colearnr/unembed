@@ -75,6 +75,9 @@ Parsers
 
 Changes
 ========
+1.0.5 - 01/12/2014
+* SlideShare - Fixed direct url format
+
 1.0.4 - 01/12/2014
 * Vimeo - Parse the description of the video
 * SlideShare - Parse the original url and the author
