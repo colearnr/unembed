@@ -67,7 +67,7 @@ describe('YouTube parsing tests', function() {
 
 describe('Vimeo parsing tests', function() {
 
-  it('should parse simple vimeo codes', function() {
+  it('should parse vimeo codes', function() {
     expect(unembed.parse('<iframe src="//player.vimeo.com/video/101896297" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/101896297">Future / Coupe</a> from <a href="http://vimeo.com/user7555033">Chris Carboni</a> on <a href="https://vimeo.com">Vimeo</a>.</p>')).to.eql({host: 'player.vimeo.com',
   hostname: 'player.vimeo.com',
   hash: null,
@@ -77,7 +77,9 @@ describe('Vimeo parsing tests', function() {
   type: 'vimeo',
   embed_code: '101896297',
   direct_url: 'https://vimeo.com/101896297',
-  player_url: 'https://player.vimeo.com/video/101896297'});
+  player_url: 'https://player.vimeo.com/video/101896297',
+  description: '<p><a href="http://vimeo.com/101896297">Future / Coupe</a> from <a href="http://vimeo.com/user7555033">Chris Carboni</a> on <a href="https://vimeo.com">Vimeo</a>.</p>'
+  });
   });
 
   it('should parse vimeo codes with options', function() {
@@ -90,14 +92,16 @@ describe('Vimeo parsing tests', function() {
   type: 'vimeo',
   embed_code: '101896297',
   direct_url: 'https://vimeo.com/101896297',
-  player_url: 'https://player.vimeo.com/video/101896297'});
+  player_url: 'https://player.vimeo.com/video/101896297',
+  description: '<p><a href=\"http://vimeo.com/101896297\">Future / Coupe</a> from <a href=\"http://vimeo.com/user7555033\">Chris Carboni</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p><p>Official music video for the song &amp;ldquo;Coupe&amp;rdquo; by Future. Be sure to check out all the other 2014 Adult Swim Singles!<br/> <br/> http://video.adultswim.com/music/singles-2014/<br/> <br/> Credits:<br/> <br/> Client: Adult Swim<br/> Director: Chris Carboni<br/> Treatment / Co-director: Daniel Garcia<br/> Animation: Chris Carboni, Elaine Lee, Dennis Moran, Matt Everton, Simon Ampel<br/> Compositing: Chris Carboni <br/> <br/> Created @ Carboni Studio</p>'
+  });
   });
 
 });
 
 describe('Slideshare parsing tests', function() {
 
-  it('should parse simple slideshare iframe codes', function() {
+  it('should parse slideshare iframe codes', function() {
     expect(unembed.parse('<iframe src="//www.slideshare.net/slideshow/embed_code/42105646" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/Risgaard/digital-workplace-future-trends" title="Future Trends in the Digital Workplace" target="_blank">Future Trends in the Digital Workplace</a> </strong> from <strong><a href="//www.slideshare.net/Risgaard" target="_blank">Martin Risgaard</a></strong> </div>')).to.eql({host: 'www.slideshare.net',
   hostname: 'www.slideshare.net',
   hash: null,
@@ -106,7 +110,12 @@ describe('Slideshare parsing tests', function() {
   href: '//www.slideshare.net/slideshow/embed_code/42105646',
   type: 'slideshare',
   embed_code: '42105646',
-  direct_url: 'https://slideshare.net/42105646'});
+  direct_url: 'https://slideshare.net/42105646',
+  original_url: "https://www.slideshare.net/Risgaard/digital-workplace-future-trends",
+  title: "Future Trends in the Digital Workplace",
+  author: "Martin Risgaard",
+  author_url: "https://www.slideshare.net/Risgaard"
+  });
   });
 
   it('should parse slideshare iframe codes with options', function() {
@@ -118,7 +127,12 @@ describe('Slideshare parsing tests', function() {
   href: '//www.slideshare.net/slideshow/embed_code/42125039?startSlide=13',
   type: 'slideshare',
   embed_code: '42125039',
-  direct_url: 'https://slideshare.net/42125039'});
+  direct_url: 'https://slideshare.net/42125039',
+  original_url: "https://www.slideshare.net/doctortvrao/teaching-with-vision-42125039",
+  title: "TEACHING WITH VISION ",
+  author: "Tummalapalli Rao",
+  author_url: "https://www.slideshare.net/doctortvrao"
+  });
   });
 
 });

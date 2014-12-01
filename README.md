@@ -11,6 +11,8 @@ Examples (From tests)
 =====================
 
 ```
+var unembed = require('unembed');
+
 // YouTube
 unembed.parse('<iframe width="420" height="315" src="//www.youtube.com/embed/zOgUB1Iqd_0" frameborder="0" allowfullscreen></iframe>')
 
@@ -65,9 +67,15 @@ unembed.parse('<iframe src="//player.vimeo.com/video/101896297?color=ffffff&amp;
 ```
 
 Parsers
-=========
+=======
 - YouTube
 - Vimeo
 - SlideShare
-- Roll your own (Just call register method)
+- Roll out your own (Just call register method)
+
+Changes
+========
+1.0.4 - 01/12/2014
+* Vimeo - Parse the description of the video
+* SlideShare - Parse the original url and the author
 
