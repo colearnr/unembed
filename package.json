@@ -1,6 +1,6 @@
 {
   "name": "unembed",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Parse common embed codes in javascript",
   "main": "index.js",
   "repository": {
@@ -11,15 +11,15 @@
     "umembed",
     "nodejs"
   ],
-  "author": "CoLearnr <hello@colearnr.com>",
+  "author": "Prabhu Subramanian <prabhu@colearnr.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/colearnr/unembed/issues"
   },
   "homepage": "https://github.com/colearnr/unembed",
   "dependencies": {
-    "cheerio": "^0.18.0",
-    "lodash": "^2.4.1"
+    "cheerio": "^0.20.0",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
