@@ -1,6 +1,6 @@
 {
   "name": "unembed",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Parse common embed codes in javascript",
   "main": "index.js",
   "repository": {
